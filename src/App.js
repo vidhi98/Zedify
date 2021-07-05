@@ -14,9 +14,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <AppHeader />
         <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/movies" component={ListingPage} />
-          <Route path="/movie/:movieId" component={MovieDetailPage} />
+          <Route path="/Zedify" exact component={HomePage} />
+          <Route path="/Zedify/movies" component={ListingPage} />
+          <Route path="/Zedify/movie/:movieId" component={MovieDetailPage} />
         </Switch>
       </ThemeProvider>
     </Router>
