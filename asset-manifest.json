@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/Zedify/static/css/main.a617e044.chunk.css",
-    "main.js": "/Zedify/static/js/main.4ab33509.chunk.js",
-    "main.js.map": "/Zedify/static/js/main.4ab33509.chunk.js.map",
+    "main.js": "/Zedify/static/js/main.869469ce.chunk.js",
+    "main.js.map": "/Zedify/static/js/main.869469ce.chunk.js.map",
     "runtime-main.js": "/Zedify/static/js/runtime-main.7275aa96.js",
     "runtime-main.js.map": "/Zedify/static/js/runtime-main.7275aa96.js.map",
-    "static/js/2.47230e68.chunk.js": "/Zedify/static/js/2.47230e68.chunk.js",
-    "static/js/2.47230e68.chunk.js.map": "/Zedify/static/js/2.47230e68.chunk.js.map",
+    "static/js/2.3c50168c.chunk.js": "/Zedify/static/js/2.3c50168c.chunk.js",
+    "static/js/2.3c50168c.chunk.js.map": "/Zedify/static/js/2.3c50168c.chunk.js.map",
     "static/js/3.83bb2629.chunk.js": "/Zedify/static/js/3.83bb2629.chunk.js",
     "static/js/3.83bb2629.chunk.js.map": "/Zedify/static/js/3.83bb2629.chunk.js.map",
     "index.html": "/Zedify/index.html",
     "static/css/main.a617e044.chunk.css.map": "/Zedify/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.47230e68.chunk.js.LICENSE.txt": "/Zedify/static/js/2.47230e68.chunk.js.LICENSE.txt",
+    "static/js/2.3c50168c.chunk.js.LICENSE.txt": "/Zedify/static/js/2.3c50168c.chunk.js.LICENSE.txt",
     "static/media/banner.5de9e5f1.jpeg": "/Zedify/static/media/banner.5de9e5f1.jpeg",
     "static/media/enjoy.da2ad221.png": "/Zedify/static/media/enjoy.da2ad221.png",
     "static/media/listingBanner.8451f47e.jpg": "/Zedify/static/media/listingBanner.8451f47e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.7275aa96.js",
-    "static/js/2.47230e68.chunk.js",
+    "static/js/2.3c50168c.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.4ab33509.chunk.js"
+    "static/js/main.869469ce.chunk.js"
   ]
 }
