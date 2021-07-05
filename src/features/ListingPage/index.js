@@ -96,7 +96,12 @@ const ListingPage = (props) => {
         <SearchBar search={(val) => handleSearch(val)} />
       </Box>
       {loading && (
-        <Box minHeight="50vh">
+        <Box
+          minHeight="50vh"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
           <CircularProgress color="secondary" style={{ fontSize: "32px" }} />
         </Box>
       )}
