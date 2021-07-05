@@ -95,7 +95,7 @@ const ListingPage = (props) => {
       <Box pt={14} mb={18}>
         <SearchBar search={(val) => handleSearch(val)} />
       </Box>
-      {loading && (
+      {loading && !error && (
         <Box
           minHeight="50vh"
           display="flex"

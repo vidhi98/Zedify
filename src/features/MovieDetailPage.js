@@ -57,7 +57,7 @@ const MovieDetailPage = ({ match }) => {
       minHeight="95vh"
       width="100%"
     >
-      {loading && (
+      {loading && !error && (
         <Box
           style={{
             fontSize: "32px",
