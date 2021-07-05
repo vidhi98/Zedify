@@ -10,13 +10,13 @@ import MovieDetailPage from "./features/MovieDetailPage";
 function App() {
   const theme = useTheme();
   return (
-    <Router>
+    <Router basename="/Zedify">
       <ThemeProvider theme={theme}>
         <AppHeader />
         <Switch>
-          <Route path="/Zedify" exact component={HomePage} />
-          <Route path="/Zedify/movies" component={ListingPage} />
-          <Route path="/Zedify/movie/:movieId" component={MovieDetailPage} />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/movies" component={ListingPage} />
+          <Route path="/movie/:movieId" component={MovieDetailPage} />
         </Switch>
       </ThemeProvider>
     </Router>
