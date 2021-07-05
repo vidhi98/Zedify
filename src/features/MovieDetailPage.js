@@ -1,7 +1,8 @@
 import { Box, CircularProgress, Grid, Typography } from "@material-ui/core";
 import axios from "axios";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import useTheme from "./../Components/CustomTheme";
+import { apiKey, apiUrl } from "./Constants";
 
 const MovieDetailPage = ({ match }) => {
   const theme = useTheme();
@@ -10,13 +11,10 @@ const MovieDetailPage = ({ match }) => {
   const [detail, setDetail] = useState({});
   const [error, setError] = useState(false);
 
-  const url = useMemo(() => process.env.REACT_APP_defaultUrl, []);
-  const apiKey = useMemo(() => process.env.REACT_APP_API_KEY, []);
-
   const searchById = useCallback(
     (id) => {
       axios
-        .get(`${url}?i=${id}&type="movie"&apikey=${apiKey}`)
+        .get(`${apiUrl}?i=${id}&type="movie"&apikey=${apiKey}`)
         .then((res) => {
           setLoading(false);
           if (res.data.Response === "True") {
@@ -41,7 +39,7 @@ const MovieDetailPage = ({ match }) => {
           setError(true);
         });
     },
-    [apiKey, url]
+    []
   );
   useEffect(() => {
     const imdbID = match.params.movieId;

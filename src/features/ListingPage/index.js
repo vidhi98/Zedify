@@ -1,20 +1,20 @@
-import { CircularProgress, Box } from "@material-ui/core";
+import { Box, CircularProgress, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import Pagination from "@material-ui/lab/Pagination";
 import axios from "axios";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import PosterList from "./PosterList";
-import useTheme from "./../../Components/CustomTheme";
+import React, { useCallback, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import listingBannerImg from "../../assets/listingBanner.jpg";
 import SearchBar from "../../Components/SearchBar";
-import { useHistory } from "react-router-dom";
-import { Typography } from "@material-ui/core";
-import Pagination from "@material-ui/lab/Pagination";
-import { makeStyles } from "@material-ui/core/styles";
+import { apiKey, apiUrl } from "../Constants";
+import useTheme from "./../../Components/CustomTheme";
+import PosterList from "./PosterList";
 
 const useStyles = makeStyles({
   paginationItem: {
     backgroundColor: "#ffffff",
     fontSize: "22px",
-    borderRadius: "10px"
+    borderRadius: "10px",
   },
 });
 
@@ -30,15 +30,13 @@ const ListingPage = (props) => {
   const [totalPages, setTotalPages] = useState(10);
 
   const [page, setPage] = React.useState(1);
-  const url = useMemo(() => process.env.REACT_APP_defaultUrl, []);
-  const apiKey = useMemo(() => process.env.REACT_APP_API_KEY, []);
 
   const searchByTitle = useCallback(
     (movieTitle) => {
       setTitle(movieTitle);
       axios
         .get(
-          `${url}?s=${movieTitle}&type="movie"&apikey=${apiKey}&page=${page}`
+          `${apiUrl}?s=${movieTitle}&type="movie"&apikey=${apiKey}&page=${page}`
         )
         .then((res) => {
           if (res.data.Response === "True") {
@@ -54,7 +52,7 @@ const ListingPage = (props) => {
           setError(true);
         });
     },
-    [apiKey, page, url]
+    [page]
   );
 
   const handleChange = (event, value) => {
@@ -110,7 +108,7 @@ const ListingPage = (props) => {
       )}
       <Box display="flex" mt={5} justifyContent="center" alignItems="center">
         <Pagination
-          count={parseInt(totalPages/10)}
+          count={parseInt(totalPages / 10)}
           page={page}
           color="secondary"
           onChange={handleChange}
